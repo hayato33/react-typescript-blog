@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import PostItem from '../components/PostItem';
 import { Post } from '../types/Post';
 
-export default function TopPage() {
+const TopPage: React.FC = () => {
   const [posts, setPosts] = useState<Post[]>([]);
   useEffect(() => {
     const fetcher = async () => {
@@ -23,4 +23,5 @@ export default function TopPage() {
       </ul>
     </>
   );
-}
+};
+export default TopPage;

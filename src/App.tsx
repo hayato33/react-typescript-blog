@@ -5,7 +5,7 @@ import TopPage from './pages/TopPage';
 import PostPage from './pages/PostPage';
 import ContactPage from './pages/ContactPage';
 
-export default function App() {
+const App: React.FC = () => {
   return (
     <>
       <Header />
@@ -16,4 +16,5 @@ export default function App() {
       </Routes>
     </>
   );
-}
+};
+export default App;

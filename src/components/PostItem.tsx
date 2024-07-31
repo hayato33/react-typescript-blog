@@ -2,7 +2,7 @@ import parse from 'html-react-parser';
 import { Link } from 'react-router-dom';
 import { Post } from '../types/Post';
 
-export default function PostItem({ id, title, createdAt, categories, content }: Post) {
+const PostItem: React.FC<Post> = ({ id, title, createdAt, categories, content }) => {
   const date: Date = new Date(createdAt);
   return (
     <li className='border border-gray-400'>
@@ -26,4 +26,5 @@ export default function PostItem({ id, title, createdAt, categories, content }: 
       </Link>
     </li>
   );
-}
+};
+export default PostItem;

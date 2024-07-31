@@ -3,7 +3,7 @@ import parse from 'html-react-parser';
 import { useEffect, useState } from 'react';
 import { Post } from '../types/Post';
 
-export default function PostPage() {
+const PostPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const [post, setPost] = useState<Post | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -50,4 +50,5 @@ export default function PostPage() {
       </article>
     </>
   );
-}
+};
+export default PostPage;
